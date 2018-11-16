@@ -36,8 +36,9 @@ initialize = async function() {
     center: new google.maps.LatLng(51.5141487121582, -0.10019999742507935),
     mapTypeId: google.maps.MapTypeId.ROADMAP
   });
-   let infowindow = new google.maps.InfoWindow();
+  let infowindow = new google.maps.InfoWindow();
   
+  let markers = [];
   let marker, i;
 
   for (i = 0; i < locations.length; i++) {  
@@ -45,6 +46,7 @@ initialize = async function() {
       position: new google.maps.LatLng(locations[i].latitude, locations[i].longitude),
       map: map
     });
+    markers.push(locations[i].name);
 
 
     google.maps.event.addListener(marker, 'click', (function(marker, i)
@@ -55,7 +57,19 @@ initialize = async function() {
         }
     })(marker, i));
   }
+  addToList(markers);
   
+}
+
+addToList = function(cities) {
+  let list = document.getElementById("list");
+  for (i = 0; i < cities.length; i++){
+
+    let listItem = document.createElement('li');
+    listItem.appendChild(document.createTextNode(cities[i]));
+    list.appendChild(listItem);
+
+  }
 }
 
 getLocation = function(url){

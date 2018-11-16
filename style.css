@@ -50,6 +50,21 @@ html, body {
     align-content: center;
 }
 
+.list-view ul{
+    list-style-type: none;
+    align-content: center;
+
+}
+
+.list-view ul li{
+    display: inline-block;
+    border: 2px solid blue;
+    background-color: lightgreen;
+    padding: 5px;
+    display: flex;
+    margin-right: 40px;
+}
+
 .footer{
     flex: 0 0 80px;
     display: flex;
