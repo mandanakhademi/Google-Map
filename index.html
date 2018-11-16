@@ -4,6 +4,7 @@
 
 <title>Starbucks</title>
 <link rel="stylesheet" type="text/css" href="style.css">
+<script src="javascript.js"></script>
 
 </head>
 <body>
@@ -14,10 +15,21 @@
             <h1>Starbucks</h1>
         </div>
             
-        <div class="content">            
+        <div class="content"> 
+		
+			<div class="map-view">
+				<p>MapView</p>
+            </div>
+             
+			<div class="list-view hide">
+				<p>ListView</p>
+			</div>             		
+		
         </div>            
         
         <div class="footer">
+			<button id="map-view-button" onclick="showMapView()">Map</button>
+			<button id="list-view-button" onclick="showListView()">List</button>
         </div>
 		
     </div>
