@@ -26,27 +26,53 @@ showListView = function(){
 
 }
 
-initialize = function() {
+initialize = async function() {
+  const url = "https://my-json-server.typicode.com/mandanakhademi/Google-Map/locations";
+  let locations = await getLocation(url);
+
   
   let map = new google.maps.Map(document.getElementById('map'), {
     zoom: 10,
     center: new google.maps.LatLng(51.5141487121582, -0.10019999742507935),
     mapTypeId: google.maps.MapTypeId.ROADMAP
   });
+   let infowindow = new google.maps.InfoWindow();
   
+  let marker, i;
+
+  for (i = 0; i < locations.length; i++) {  
+    marker = new google.maps.Marker({
+      position: new google.maps.LatLng(locations[i].latitude, locations[i].longitude),
+      map: map
+    });
+
+
+    google.maps.event.addListener(marker, 'click', (function(marker, i)
+    {
+        return function() {
+          infowindow.setContent(locations[i].name);
+          infowindow.open(map, marker);
+        }
+    })(marker, i));
+  }
+  
+}
+
+getLocation = function(url){
+  return fetch(url)
+    .then(response => response.json())
+    .then(json => {
+      return json;
+    });
+
 }
  
 loadScript = function() {
-let script = document.createElement('script');
-script.type = 'text/javascript';
-script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&' +
-    'callback=initialize';
-document.body.appendChild(script);
+  let script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&' +
+      'callback=initialize';
+  document.body.appendChild(script);
 }
 
 window.onload = loadScript;
-
-
-
-
-
