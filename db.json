@@ -1,64 +1,64 @@
 {
 	"locations":[
 		{
-			"id": "1",
+			"id": 1,
 			"name": "West Wickham - High Street",     
 			"longitude": -0.018300000578165054, 
-			"latitude": 51.37628936767578, 
+			"latitude": 51.37628936767578
 		}, 
 		{
-			"id": "2",    
+			"id": 2,    
 			"name": "Juxon House - St. Pauls Church Yard",     
 			"longitude": -0.10019999742507935, 
-			"latitude": 51.5141487121582, 
+			"latitude": 51.5141487121582
 		}, 
 		{
-			"id": "3", 
+			"id": 3, 
 			"name": "Paddington Station - Mezzanine",     
 			"longitude": -0.1775200068950653, 
-			"latitude": 51.51731872558594, 
+			"latitude": 51.51731872558594
 		},
 		{
-			"id": "4", 
+			"id": 4, 
 			"name": "Grosvenor Street",     
 			"longitude": -0.14507000148296356, 
-			"latitude": 51.51216125488281, 
+			"latitude": 51.51216125488281
 		}, 
 		{
-			"id": "5", 
+			"id": 5, 
 			"name": "Carnaby Street",     
 			"longitude": -0.1392499953508377, 
-			"latitude": 51.51401901245117, 
+			"latitude": 51.51401901245117
 		}, 
 		{
-			"id": "6", 
+			"id": 6, 
 			"name": "Berkeley Street",     
 			"longitude": -0.1440799981355667, 
-			"latitude": 51.5088005065918, 
+			"latitude": 51.5088005065918
 		}, 
 		{
-			"id": "7", 
+			"id": 7, 
 			"name": "Baker Street",     
 			"longitude": -0.15708400309085846, 
-			"latitude": 51.521583557128906, 
+			"latitude": 51.521583557128906
 		}, 
 		{
-			"id": "8", 
+			"id": 8, 
 			"name": "Wardour Street",     
 			"longitude": -0.13529999554157257, 
-			"latitude": 51.515281677246094, 
+			"latitude": 51.515281677246094
 		}, 
 		{
-			"id": "9", 
+			"id": 9, 
 			"name": "High Holborn",     
 			"longitude": -0.11394000053405762, 
-			"latitude": 51.518348693847656, 
+			"latitude": 51.518348693847656
 		}, 
 		{
-			"id": "10", 
+			"id": 10, 
 			"name": "Leadenhall Street",    
 			"longitude": -0.08285000175237656, 
-			"latitude": 51.51340866088867, 
+			"latitude": 51.51340866088867
 		}
 	]
 }
